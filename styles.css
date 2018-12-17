@@ -1,0 +1,259 @@
+
+body{
+    margin: 0px;
+}
+.contain_wrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    top:0px;
+    left: 0px;
+}
+.header{
+    position: fixed;
+    float: left;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    height: 69px;
+    z-index: 62;
+    background-color: white; 
+    box-shadow: 1px -2px 28px #888888
+}
+#header_icon{
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-image: url(images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 67px;
+}
+.innerPageContent{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: left;
+    top: 68px
+}
+.continue{
+    position: relative;
+    height: 50px;
+    width: auto;
+    left: 46%;
+    margin-bottom: 20px;
+    float: left;
+    background-color: #489fd4;
+}
+.continue:hover{
+    background-color: #236993;
+    cursor: pointer;
+}
+#continue_text{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 19px;
+    padding-top: 10%;
+}
+#titleWrapper{
+    position: relative;
+    top:0%;
+    height:65px;
+    width: 100%;
+    background-color:#489fd4;
+}
+
+#titleWrapperText{
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 16px;
+    font-size: 28px;
+}
+
+#block1{
+    position: relative;
+    height: 45%;
+    width: 100%;
+    float: left;
+    background-image: url(images/intro-02.jpg);
+   background-size: cover;
+    background-repeat: no-repeat;
+}
+  .blockContent{  
+    position: relative;
+    float: left;
+    top: 7%;
+    left: 15%;
+    height: auto;
+    width: 80%;
+}
+#heading1{
+    position: relative;
+    float: left;
+    height: auto;
+    width: auto;
+    color: white;
+    font-size: 20px;
+}
+p{   
+    position: relative;
+    height: auto;
+    width: 50%;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+#block2,#block3,#block5,#block6,#block7,#block9{    
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    float: left;    
+}
+
+#block2_content{
+    position: relative;
+    float: left;
+    margin-top: 7%;
+    margin-left: 24%;
+    height: auto;
+    width: 50%;
+    /*background-color: beige;*/
+}
+
+#block4,#block8{
+    position: relative;
+    height: 45%;
+    width: 100%;
+    float: left;
+    /*background-image: url(images/wgc.jpg);*/
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+ #sub_heading1{
+        font-size: 40px;
+    }
+#block6_img{
+    position: relative;
+    height: 45%;
+    width: 50%;
+    float: left;
+   
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+#block6_list_wrapper,#block7_list_wrapper{
+    position: relative;
+    height: auto;
+    float: left;
+    width: 47%;
+}
+#block6_list_heading,#block7_list_heading{
+    position: relative;
+    float: left;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: #489fd4;
+    height: auto;
+    width: 100%;
+    padding-left: 20px;
+}
+.bulletsBlockList{
+    margin-top: 0px;
+    padding-left: 40px;
+    position: relative;
+    font-size: 20px;
+    color: rgb(75, 78, 79);
+}
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 992px) {
+   #block1{
+        height: auto;
+      background-size: cover;
+    }
+      .blockContent{  left:8%;
+        width: 92%;
+        top: 12px;
+        padding-bottom: 4%;
+    }
+     p{
+        width: 100%;
+    }
+    #block4,#block8{
+       background-size: cover;
+    }
+}
+@media screen and (max-width: 600px) {
+    #block1{
+        height: auto;
+        /*background-size: 100% 100%;*/
+    }
+    #titleWrapper{
+        height: auto;
+    }
+     .blockContent{ 
+        left:4%;
+        top: 12px;
+        padding-bottom: 4%;
+        width: 95%;
+    }
+    p{
+        width: 100%;
+    }
+
+    #block4{
+         background-size: cover;
+    }
+    #sub_heading1{
+        font-size: 25px;
+    }
+    #block6_list_wrapper, #block7_list_wrapper {
+    position: relative;
+    height: auto;
+    float: left;
+    width: 100%;
+    }
+    #block6_img {
+    position: relative;
+    height: 45%;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+}

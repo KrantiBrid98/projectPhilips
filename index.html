@@ -1,0 +1,323 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+
+    </script>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <script>
+        console.log('hello');
+        var listData = ['Recognize the challenges our customers face in hospital lower acuity care areas, or General Care', 'Outline how Philips can aid in addressing these challenges with our General Care solution', 'Describe what the General Care solution offers and its key elements']
+        var listDataBlock2 = ['General wards', 'Step-down units', 'Intermediate care units', 'Transitional care units', 'Med-surg units', 'Hospital’s halls, courtyards, and cafes (for mobile patients)']
+        var criticalcareData = ['High nurse to patient ratio (usually 1:1) for patients requiring close observation or having significant, unpredictable needs', 'Staffed by highly trained doctors and nurses who specialize in caring for complex, critically ill patients', 'Advanced medical equipment is available for continuous monitoring', 'Patients tend to decline quickly - the staff need to be aware of any deviations from normal values', 'Patients are usually bed-bound'];
+        var generalcareData = ['Low staff to patient ratios (about 1:8 to 1:12) per shift (but during night shifts, this could be 1:30)', 'Staffed by doctors and nurses as well as other skilled supervised resources such as nursing assistants (NA) and patient care technicians (PCT) to support patients with fewer needs', 'Vital signs are taken manually or with intermittent monitoring', 'Majority of patients deteriorate slowly – the staff need notification of patient decline trends', 'Patients may be mobile']
+        var blockCount = 4;
+        $(function () {
+            var elemObj = {};
+            elemObj['contain_wrapper'] = document.createElement('div');
+            $(elemObj['contain_wrapper']).addClass("contain_wrapper")
+            $("body").append(elemObj['contain_wrapper']);
+
+            console.log($('.contain_wrapper').height());
+            elemObj['header'] = document.createElement('div');
+            $(elemObj['header']).addClass("header")
+            $(".contain_wrapper").append(elemObj['header']);
+
+            elemObj['header_icon'] = document.createElement('div');
+            $(elemObj['header_icon']).attr('id', 'header_icon')
+            $(".header").append(elemObj['header_icon']);
+
+            elemObj['innerPageContent'] = document.createElement('div');
+            $(elemObj['innerPageContent']).addClass("innerPageContent")
+            $(".contain_wrapper").append(elemObj['innerPageContent']);
+
+            elemObj['titleWrapper'] = document.createElement('div');
+            $(elemObj['titleWrapper']).attr("id", "titleWrapper")
+            $(".innerPageContent").append(elemObj['titleWrapper']);
+
+            elemObj['titleWrapperText'] = document.createElement('div');
+            $(elemObj['titleWrapperText']).attr("id", "titleWrapperText").html("GC Introduction Gold")
+            $("#titleWrapper").append(elemObj['titleWrapperText']);
+
+            elemObj['block1'] = document.createElement('div');
+            $(elemObj['block1']).attr("id", "block1")
+            $(".innerPageContent").append(elemObj['block1']);
+
+            elemObj['block1_content'] = document.createElement('div');
+            $(elemObj['block1_content']).attr("id", "block1_content").addClass('blockContent')
+            $("#block1").append(elemObj['block1_content']);
+
+            elemObj['heading1'] = document.createElement('div');
+            $(elemObj['heading1']).attr("id", "heading1").html("Introduction")
+            $("#block1_content").append(elemObj['heading1']);
+
+            elemObj['sub_heading1_1'] = document.createElement('p');
+            $(elemObj['sub_heading1_1']).attr("id", "sub_heading1_1").html("This module introduces the highlights of the Philips General Care solution for early identification of patient deterioration.")
+            $("#block1_content").append(elemObj['sub_heading1_1']);
+            elemObj['sub_heading1_2'] = document.createElement('p');
+            $(elemObj['sub_heading1_2']).attr("id", "sub_heading1_2").html("Missed patient acute events, late interventions, and inconsistent responses cause harm and lead to avoidable deaths.")
+            $("#block1_content").append(elemObj['sub_heading1_2']);
+
+            elemObj['block2'] = document.createElement('div');
+            $(elemObj['block2']).attr("id", "block2")
+            $(".innerPageContent").append(elemObj['block2']);
+
+            elemObj['block2_content'] = document.createElement('video');
+            $(elemObj['block2_content']).attr("id", "block2_content").attr('src', 'images/video.mp4').attr('controls', 'true')
+            $("#block2").append(elemObj['block2_content']);
+
+            elemObj['block3'] = document.createElement('div');
+            $(elemObj['block3']).attr("id", "block3")
+            $(".innerPageContent").append(elemObj['block3']);
+
+            elemObj['block3_content'] = document.createElement('div');
+            $(elemObj['block3_content']).addClass('blockContent').attr("id", "block3_content").css({ 'top': '0%' });
+            $("#block3").append(elemObj['block3_content']);
+
+            elemObj['sub_heading3_1'] = document.createElement('p');
+            $(elemObj['sub_heading3_1']).attr("id", "sub_heading3_1").html("Learning Objectives").css({
+                'color': '#489fd4',
+                'width': 'auto'
+            })
+            $("#block3_content").append(elemObj['sub_heading3_1']);
+            elemObj['sub_heading3_2'] = document.createElement('p');
+            $(elemObj['sub_heading3_2']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("Unrecognized patient deterioration results in adverse events and avoidable deaths. Click the Play button to learn more about the challenges hospitals are facing in General Care today.")
+            $("#block3_content").append(elemObj['sub_heading3_2']);
+
+            $("#block3_content").append(elemObj['sub_heading3_3']);
+            elemObj['sub_heading3_3'] = document.createElement('p');
+            $(elemObj['sub_heading3_3']).css({ 'color': '#4b4e4f', 'width': 'auto', 'margin-top': '20px' }).attr("id", "sub_heading3_3").html("At the end of this module, you will be able to:")
+            $("#block3_content").append(elemObj['sub_heading3_3']);
+
+            elemObj['sub_heading3_4'] = document.createElement('ul');
+            $(elemObj['sub_heading3_4']).attr("id", "sub_heading3_4");
+            $("#block3_content").append(elemObj['sub_heading3_4']);
+
+            for (var i = 0; i < 3; i++) {
+                elemObj['continueeading3_4_' + i] = document.createElement('li');
+                $(elemObj['sub_heading3_4_' + i]).attr("id", 'sub_heading3_4_' + i).css({ 'font-size': '20px', 'color': '#4b4e4f' }).html(listData[i]);
+                $('#sub_heading3_4').append(elemObj['sub_heading3_4_' + i]);
+            }
+
+            // elemObj['continue'] = document.createElement('div');
+            // $(elemObj['continue']).attr("id", "continue").addClass('continue');
+            // $(".innerPageContent").append(elemObj['continue']);
+
+            // elemObj['continue_text'] = document.createElement('div');
+            // $(elemObj['continue_text']).attr("id", "continue_text").html('Continue')
+            // $(".continue").append(elemObj['continue_text']);
+
+            elemObj['block4'] = document.createElement('div');
+            $(elemObj['block4']).attr("id", "block4").css({ 'display': 'none','background-image': 'url(images/wgc.jpg)'})
+            $(".innerPageContent").append(elemObj['block4']);
+
+            elemObj['block4_content'] = document.createElement('div');
+            $(elemObj['block4_content']).attr("id", "block4_content").addClass('blockContent')
+            $("#block4").append(elemObj['block4_content']);
+
+            elemObj['sub_heading4_1'] = document.createElement('p');
+            $(elemObj['sub_heading4_1']).attr("id", "sub_heading1").html("What is General Care?")
+            $("#block4_content").append(elemObj['sub_heading4_1']);
+
+            elemObj['sub_heading4_2'] = document.createElement('p');
+            $(elemObj['sub_heading4_2']).attr("id", "sub_heading4_2").html("What is General Care, and how does it differ from Critical Care?")
+            $("#block4_content").append(elemObj['sub_heading4_2']);
+
+            elemObj['block5'] = document.createElement('div');
+            $(elemObj['block5']).attr("id", "block5").css({ 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block5']);
+
+            elemObj['block5_content'] = document.createElement('div');
+            $(elemObj['block5_content']).attr("id", "block5_content").addClass('blockContent')
+            $("#block5").append(elemObj['block5_content']);
+
+            elemObj['sub_heading5_1'] = document.createElement('p');
+            $(elemObj['sub_heading5_1']).attr("id", "sub_heading5_1").css({
+                'color': '#489fd4',
+                'width': 'auto',
+                'font-size': '20px'
+            }).html('The patient care continuum');
+            $("#block5_content").append(elemObj['sub_heading5_1']);
+
+            elemObj['sub_heading5_2'] = document.createElement('p');
+            $(elemObj['sub_heading5_2']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("Hospitals have a continuum of care – taking care of patients from the highest acuity levels, to progressively lower acuity levels as they get better.")
+            $("#block5_content").append(elemObj['sub_heading5_2']);
+
+
+            elemObj['sub_heading5_3'] = document.createElement('p');
+            $(elemObj['sub_heading5_3']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("General Care is typically delivered in lower acuity areas of the hospital such as")
+            $("#block5_content").append(elemObj['sub_heading5_3']);
+
+
+            for (var i = 0; i < 6; i++) {
+                elemObj['sub_heading5_3' + i] = document.createElement('li');
+                $(elemObj['sub_heading5_3' + i]).attr("id", 'sub_heading5_3' + i).css({ 'font-size': '20px', 'color': '#4b4e4f' }).html(listDataBlock2[i]);
+                $('#block5_content').append(elemObj['sub_heading5_3' + i]);
+            }
+
+            elemObj['sub_heading5_4'] = document.createElement('p');
+            $(elemObj['sub_heading5_4']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("This may differ from hospital to hospital. In many hospitals, there may be a seamless transitioning in the levels of acuity.")
+            $("#block5_content").append(elemObj['sub_heading5_4']);
+
+
+            elemObj['block6'] = document.createElement('div');
+            $(elemObj['block6']).attr("id", "block6").css({ 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block6']);
+
+            elemObj['block6_content'] = document.createElement('div');
+            $(elemObj['block6_content']).attr("id", "block6_content").addClass('blockContent')
+            $("#block6").append(elemObj['block6_content']);
+
+            elemObj['block6_img'] = document.createElement('div');
+            $(elemObj['block6_img']).attr("id", "block6_img").css({ 'background-image': 'url(images/criticalcare.jpg)' })
+            $("#block6_content").append(elemObj['block6_img']);
+
+            elemObj['block6_list_wrapper'] = document.createElement('div');
+            $(elemObj['block6_list_wrapper']).attr("id", "block6_list_wrapper")
+            $("#block6_content").append(elemObj['block6_list_wrapper']);
+
+            elemObj['block6_list_heading'] = document.createElement('div');
+            $(elemObj['block6_list_heading']).attr("id", "block6_list_heading").html("Critical Care:")
+            $("#block6_list_wrapper").append(elemObj['block6_list_heading']);
+
+            for (var i = 0; i < 5; i++) {
+                elemObj['sub_heading6_' + i] = document.createElement('li');
+                $(elemObj['sub_heading6_' + i]).addClass('bulletsBlockList').attr("id", 'sub_heading6_' + i).html(criticalcareData[i]);
+                $('#block6_list_wrapper').append(elemObj['sub_heading6_' + i]);
+            }
+
+            elemObj['block7'] = document.createElement('div');
+            $(elemObj['block7']).attr("id", "block7").css({ 'margin-top': '5%', 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block7']);
+
+            elemObj['block7content'] = document.createElement('div');
+            $(elemObj['block7content']).attr("id", "block7content").addClass('blockContent')
+            $("#block7").append(elemObj['block7content']);
+
+            elemObj['block7_img'] = document.createElement('div');
+            $(elemObj['block7_img']).attr("id", "block6_img").css({ 'background-image': ' url(images/gencare.jpg)' })
+            $("#block7content").append(elemObj['block7_img']);
+
+            elemObj['block7_list_wrapper'] = document.createElement('div');
+            $(elemObj['block7_list_wrapper']).attr("id", "block7_list_wrapper")
+            $("#block7content").append(elemObj['block7_list_wrapper']);
+
+            elemObj['block7_list_heading'] = document.createElement('div');
+            $(elemObj['block7_list_heading']).attr("id", "block7_list_heading").html("General Care:")
+            $("#block7_list_wrapper").append(elemObj['block7_list_heading']);
+
+            for (var i = 0; i < 5; i++) {
+                elemObj['sub_heading7_' + i] = document.createElement('li');
+                $(elemObj['sub_heading7_' + i]).addClass('bulletsBlockList').attr("id", 'sub_heading7_' + i).html(generalcareData[i]);
+                $('#block7_list_wrapper').append(elemObj['sub_heading7_' + i]);
+            }
+
+            elemObj['block8'] = document.createElement('div');
+            $(elemObj['block8']).attr("id", "block8").css({ 'display': 'none','background-image': 'url(images/intro-04.jpg)'})
+            $(".innerPageContent").append(elemObj['block8']);
+
+            elemObj['block8_content'] = document.createElement('div');
+            $(elemObj['block8_content']).attr("id", "block8_content").addClass('blockContent')
+            $("#block8").append(elemObj['block8_content']);
+
+            elemObj['sub_heading8_1'] = document.createElement('p');
+            $(elemObj['sub_heading8_1']).attr("id", "sub_heading1").html("Customer challenges in General Care")
+            $("#block8_content").append(elemObj['sub_heading8_1']);
+
+            elemObj['sub_heading8_2'] = document.createElement('p');
+            $(elemObj['sub_heading8_2']).attr("id", "sub_heading8_2").html("General Care providers face additional challenges in providing quality care.")
+            $("#block8_content").append(elemObj['sub_heading8_2']);
+ 
+            elemObj['block9'] = document.createElement('div');
+            $(elemObj['block9']).attr("id", "block9").css({ 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block9']);
+
+            elemObj['block9_content'] = document.createElement('div');
+            $(elemObj['block9_content']).attr("id", "block9_content").addClass('blockContent')
+            $("#block9").append(elemObj['block9_content']);
+
+            elemObj['sub_heading9_1'] = document.createElement('p');
+            $(elemObj['sub_heading9_1']).attr("id", "sub_heading9_1").css({
+                'color': '#489fd4',
+                'width': 'auto',
+                'font-size': '20px'
+            }).html('Monitoring patient deterioration');
+            $("#block9_content").append(elemObj['sub_heading9_1']);
+
+            elemObj['sub_heading9_2'] = document.createElement('p');
+            $(elemObj['sub_heading9_2']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("When patients come into the hospital they put their trust in the professionals caring for them. They assume they are being monitored and that any deterioration in their condition will be detected and acted on quickly.")
+            $("#block9_content").append(elemObj['sub_heading9_2']);
+
+
+            elemObj['sub_heading9_3'] = document.createElement('p');
+            $(elemObj['sub_heading9_3']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("Unfortunately, this is not always the case – hospital mortality statistics reveal that disturbing numbers of patients die simply because staff failed to spot or act on changes in their condition.")
+            $("#block9_content").append(elemObj['sub_heading9_3']);
+
+            elemObj['sub_heading9_3'] = document.createElement('p');
+            $(elemObj['sub_heading9_3']).css({ 'color': '#4b4e4f', 'width': 'auto' }).attr("id", "sub_heading3_2").html("Lower acuity care areas of hospitals have additional challenges in delivering high-quality care.")
+            $("#block9_content").append(elemObj['sub_heading9_3']);
+
+            elemObj['block10'] = document.createElement('div');
+            $(elemObj['block10']).attr("id", "block10").css({ 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block10']);
+
+            // elemObj['collapsable1'] = document.createElement('div');
+            // $(elemObj['collapsable1']).attr("id", "collapsable1").css({ 'display': 'none' }).addClass(collapsible)
+            // $(".block10").append(elemObj['collapsable1']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            elemObj['block11'] = document.createElement('div');
+            $(elemObj['block11']).attr("id", "block11").css({ 'display': 'none' })
+            $(".innerPageContent").append(elemObj['block11']);
+
+
+
+
+
+
+
+
+            elemObj['continue'] = document.createElement('div');
+            $(elemObj['continue']).attr("id", "continue").addClass('continue');
+            $(".innerPageContent").append(elemObj['continue']);
+
+            elemObj['continue_text'] = document.createElement('div');
+            $(elemObj['continue_text']).attr("id", "continue_text").html('Continue')
+            $(".continue").append(elemObj['continue_text']);
+
+
+            $('.continue').click(function () {
+                for (var i = blockCount; i <= blockCount + 3; i++) {
+                    var a = document.getElementById('block' + i)
+                    a.style.display = 'block'
+                }
+                $('html, body').animate({
+                    scrollTop: ($("#block" + blockCount).offset().top - $('.header').height())
+                }, 500);
+                blockCount = blockCount + 4;
+            });
+        });
+    </script>
+    <title>
+
+        <body>
+
+        </body>
+    </title>
+</head>
+
+</html>
